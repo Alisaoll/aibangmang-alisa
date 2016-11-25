@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget id="A6922925660374" version="0.0.1">
+  <name>abm2.0</name>
+  <description>abm2.0</description>
+  <author email="developer@apicloud.com" href="http://www.apicloud.com">Developer</author>
+  <content src="htmls/home.html"/>
+  <!-- <preference name="pageBounce" value="true"/>   -->
+  <preference name="statusBarAppearance" value="true"/>
+  <preference name="appBackground" value="#f5f5f5"/>
+  <preference name="windowBackground" value="#f5f5f5"/>
+  <!-- <preference name="frameBackgroundColor" value="#f5f5f5"/> -->
+  <preference name="hScrollBarEnabled" value="true"/>
+  <preference name="vScrollBarEnabled" value="true"/>
+  <preference name="autoLaunch" value="true"/>
+  <preference name="fullScreen" value="true"/>
+  <preference name="autoUpdate" value="true"/>
+  <preference name="smartUpdate" value="false"/>
+  <preference name="debug" value="true"/>
+  <preference name="iOS7StatusBarAppearance" value="true"/>
+  <permission name="readPhoneState"/>
+  <permission name="call"/>
+  <permission name="sms"/>
+  <permission name="camera"/>
+  <permission name="record"/>
+  <permission name="location"/>
+  <permission name="fileSystem"/>
+  <permission name="internet"/>
+  <permission name="bootCompleted"/>
+  <permission name="hardware"/>
+  <permission name="contact"/>
+  <access origin="*"/>
+</widget>

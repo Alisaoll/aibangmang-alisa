@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+  <title>登录</title>
+  <link rel="stylesheet" type="text/css" href="../dist/css/main.css">
+</head>
+
+<body>
+  <div class="d-frame d-justify-content-c d-bg-white" style="height: 100vh;" id="login">
+    <div class="d-flex-col-100">
+      <ul class="d-list d-list-line d-form-list d-padding-20">
+        <li class="d-btn-circle d-padding-l-20 d-margin-t-20" style="border:1px solid #eee;background: none">
+          <div class="d-list-input ">
+            <input type="text" placeholder="请输入手机号啊" name="username" v-model="phone" v-on:blur="Verification">
+          </div>
+        </li>
+        <li class="d-btn-circle d-padding-l-20 d-margin-t-20" style="border:1px solid #eee;background: none">
+          <div class="d-list-input">
+            <input type="text" placeholder="请输入密码"  v-model="password"  name="password">
+            <!-- <input name="grant_type" value="password" type="hidden">
+            <input name="client_id" value="4" type="hidden">
+            <input name="client_secret" value="1X19b2P2sSSXqj9NuN0LnsGNrYdQkfC32BljpqIV" type="hidden">
+            <input name="scope" value="" type="hidden"> -->
+          </div>
+        </li>
+        <div class="d-margin-t-40">
+          <button class="d-btn d-bg-main-active d-btn-block d-btn-circle" v-on:click="" type="submit">登录</button>
+          <div class="d-info d-font-size-12 d-color-gray">
+            <div class="d-info-item d-padding-l-10">忘记密码</div>
+            <div class="d-info-item">没有账号？去登录</div>
+          </div>
+        </div>
+      </ul>
+      <div class="d-padding-40 d-bg-white">
+        <div class="d-row d-row-padding">
+          <div class="d-col-xs-4 d-text-center">
+            <i class="iconfont icon-jinyanjinliao207" style="font-size: 40px"></i>
+          </div>
+          <div class="d-col-xs-4 d-text-center">
+            <i class="iconfont icon-qq" style="font-size: 40px"></i>
+          </div>
+          <div class="d-col-xs-4 d-text-center">
+            <i class="iconfont icon-weixin" style="font-size: 40px"></i>
+          </div>
+        </div>
+        <p class="d-text-center d-margin-t-40 d-color-gray">使用第三方账号登录</p>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../dist/scripts/common/vue.js"></script>
+  <script type="text/javascript" src="../dist/scripts/modules/auth_login.js"></script>
+</body>
+
+</html>

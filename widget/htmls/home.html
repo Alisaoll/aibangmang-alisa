@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+  <link href="../dist/css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="d-nav d-bg-main">
+    <a class="d-nav-left d-nav-btn">深圳</a>
+    <div class="d-nav-title">
+      <div class="d-search-box">
+        <i class="iconfont icon-sousuo"></i>
+        <input type="text" placeholder="请输入搜索内容">
+      </div>
+    </div>
+    <a class="d-nav-right d-nav-btn">
+      <i class="iconfont icon-zhanneixiaoxi"></i>
+    </a>
+  </header>
+
+  <footer class="d-border-t" style="position:fixed;bottom:0;left:0;width:100%">
+    <div class="d-bar">
+      <div class="d-bar-item active" @touchstart='onClickHome'>
+        <i class="iconfont icon-31shouye"></i>
+        <h4>首页</h4>
+      </div>
+      <div class="d-bar-item">
+        <i class="iconfont icon-heart"></i>
+        <h4>大爱</h4>
+      </div>
+      <div class="d-bar-item" @touchstart='onClickSubmit'>
+        <i class="iconfont icon-add1coloring"></i>
+      </div>
+      <div class="d-bar-item">
+        <i class="iconfont icon-hezuo"></i>
+        <h4>帮忙</h4>
+      </div>
+      <div class="d-bar-item">
+        <i class="iconfont icon-mine"></i>
+        <h4>我的</h4>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="../dist/scripts/common/vue.js"></script>
+  <script type="text/javascript" src="../dist/scripts/modules/home.js"></script>
+</body>
+
+</html>

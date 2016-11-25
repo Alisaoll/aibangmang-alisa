@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>注册</title>
+  	<link rel="stylesheet" type="text/css" href="../dist/css/main.css">
+</head>
+
+<body>
+    <div class="d-frame d-justify-content-c d-bg-white" style="height: 100vh;" id="register">
+        <div class="d-flex-col-100">
+            <ul class="d-list d-list-line d-form-list d-padding-20">
+                <li class="d-btn-circle d-padding-l-20 d-margin-t-20" style="border:1px solid #eee;background: none">
+                    <div class="d-list-input ">
+                        <input type="text" placeholder="请输入手机号" v-model="phone" v-on:blur="Verification">
+                    </div>
+                </li>
+                <li class="d-btn-circle d-padding-l-20 d-margin-t-20" style="border:1px solid #eee;background: none">
+                    <div class="d-list-input">
+                        <input type="text" placeholder="请输入验证码" >
+                    </div>
+                    <div class="d-list-icon" style="right:0px">
+                        <button class="d-btn d-btn-big d-padding-10" style="border-top-right-radius: 10rem;border-bottom-right-radius: 10rem;" @click="validate" :class="[ifrev? 'd-bg-gray ' : 'd-bg-main']">{{vericode}}</button>
+                    </div>
+                </li>
+                <li class="d-btn-circle d-padding-l-20 d-margin-t-20" style="border:1px solid #eee;background: none">
+                    <div class="d-list-input">
+                        <input v-bind:type="[istext ? 'text' : 'password']" placeholder="请输入密码">
+                    </div>
+                    <div class="d-list-icon">
+                        <i class="iconfont icon-liulan d-font-size-30" @click="see"></i>
+                    </div>
+                </li>
+                <div class="d-margin-t-40">
+                    <button class="d-btn d-btn-block d-btn-circle" :class="{'d-bg-main': isTrue}">下一步</button>
+                </div>
+            </ul>
+            <div class="d-padding-40 d-bg-white">
+                <div class="d-row d-row-padding">
+                    <div class="d-col-xs-4 d-text-center">
+                        <i class="iconfont icon-social-weibo" style="font-size: 40px"></i>
+                    </div>
+                    <div class="d-col-xs-4 d-text-center">
+                        <i class="iconfont icon-qq" style="font-size: 40px"></i>
+                    </div>
+                    <div class="d-col-xs-4 d-text-center">
+                        <i class="iconfont icon-weixin" style="font-size: 40px"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../dist/scripts/common/vue.js"></script>
+    <script type="text/javascript" src="../dist/scripts/modules/auth_register.js"></script>
+</body>
+
+</html>

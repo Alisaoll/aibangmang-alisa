@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link href="../css/main.css" rel="stylesheet" />
+    <title>home_food</title>
+  </head>
+  <body>
+    <div class="m-home-food g-padding">
+      <div class="categories g-flex g-flex-around text-center">
+        <div class="category g-circle">美食</div>
+      </div>
+      <div id="foods" v-cloak>
+        <li v-for="food in foods">
+          {{ food.title }}
+        </li>
+      </div>
+    </div>
+    <script type="text/javascript" src="../scripts/common/vue.js"></script>
+    <script type="text/javascript" src="../scripts/home_food.js"></script>
+  </body>
+</html>

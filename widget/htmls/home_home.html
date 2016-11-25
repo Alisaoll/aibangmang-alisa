@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width,initial-scale=1.0" />
+	<title>爱帮忙首页frame</title>
+	<link rel="stylesheet" type="text/css" href="../dist/css/main.css">
+</head>
+
+<body>
+	<div class="d-frame" v-cloak id="frame">
+		<div class="baner">
+			<div class="d-placehold-wrap">
+				<span style="background-image:url(http://placeholder.qiniudn.com/640x200)"></span>
+			</div>
+		</div>
+
+		<div class="d-container-fluid d-margin-t-10 d-border-tb">
+			<div class="d-grid">
+				<div class="d-row d-text-center">
+					<div class="d-col-xs-4">
+						<div>
+							<img src="https://coding.net/static/project_icon/scenery-19.png" width="60%" height="auto">
+						</div>
+						<h5 class="d-nowrap-1">平台资质齐全</h5>
+					</div>
+					<div class="d-col-xs-4">
+						<div>
+							<img src="https://coding.net/static/project_icon/scenery-19.png" width="60%" height="auto">
+						</div>
+						<h5 class="d-nowrap-1">民生银行资金监管</h5>
+					</div>
+					<div class="d-col-xs-4">
+						<div>
+							<img src="https://coding.net/static/project_icon/scenery-19.png" width="60%" height="auto">
+						</div>
+						<h5 class="d-nowrap-1">专业审核小组</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="d-container-fluid d-margin-t-10 d-border-tb">
+			<div class="d-grid">
+				<div class="d-row d-text-center">
+					<div class="d-col-xs-3">
+						<div>
+							<img src="https://coding.net/static/project_icon/scenery-19.png" width="60%" height="auto">
+						</div>
+						<h5>爱心帮扶</h5>
+					</div>
+					<div class="d-col-xs-3">
+						<div>
+							<img src="https://coding.net/static/project_icon/scenery-19.png" width="60%" height="auto">
+						</div>
+						<h5>医疗看病</h5>
+					</div>
+					<div class="d-col-xs-3">
+						<div>
+							<img src="https://coding.net/static/project_icon/scenery-19.png" width="60%" height="auto">
+						</div>
+						<h5>资源关系</h5>
+					</div>
+					<div class="d-col-xs-3">
+						<div>
+							<img src="https://coding.net/static/project_icon/scenery-19.png" width="60%" height="auto">
+						</div>
+						<h5>上学择校</h5>
+					</div>
+					<div class="d-col-xs-3">
+						<div>
+							<img src="https://coding.net/static/project_icon/scenery-19.png" width="60%" height="auto">
+						</div>
+						<h5>汽车服务</h5>
+					</div>
+					<div class="d-col-xs-3">
+						<div>
+							<img src="https://coding.net/static/project_icon/scenery-19.png" width="60%" height="auto">
+						</div>
+						<h5>风水易经</h5>
+					</div>
+					<div class="d-col-xs-3">
+						<div>
+							<img src="https://coding.net/static/project_icon/scenery-19.png" width="60%" height="auto">
+						</div>
+						<h5>跑腿代办</h5>
+					</div>
+					<div class="d-col-xs-3">
+						<div>
+							<img src="https://coding.net/static/project_icon/scenery-19.png" width="60%" height="auto">
+						</div>
+						<h5>其他</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="d-container-fluid d-margin-t-10 d-border-tb">
+			<div class="d-info d-border-b d-padding-10">
+				<div class="d-info-item">
+					<blockquote>能力者排行</blockquote>
+				</div>
+				<div class="d-info-item">
+					<span class="d-font-size-12 d-color-main">查看更多<i class="iconfont icon-arrowright"></i></span>
+				</div>
+			</div>
+			<div class="d-grid">
+				<div class="d-row d-text-center">
+
+					<div class="d-col-xs-3" v-for="skillRanking in skillRankings">
+						<div>
+							<img :src="skillRanking.pic" width="60%" height="auto">
+						</div>
+						<h3>{{ skillRanking.name }}</h3>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="d-container-fluid d-margin-t-10 d-border-tb">
+			<div class="d-info d-padding-10">
+				<div class="d-info-item">
+					<blockquote>求助事项推荐</blockquote>
+				</div>
+				<div class="d-info-item">
+					<span class="d-font-size-12 d-color-main">查看更多<i class="iconfont icon-xiangyoujiantou"></i></span>
+				</div>
+			</div>
+			<ul class="d-list d-list-active d-border-tb">
+				<li class="d-border-t" v-for='help in helps'>
+					<div class="d-list-info">
+						<div class="d-row d-row-padding-big d-list-media">
+							<div class="d-col-xs-4">
+								<span :style="{ backgroundImage: `url(${help.pic})`}"></span>
+							</div>
+							<div class="d-col-xs-8">
+								<h4 class="d-nowrap-2"><span class="d-color-main">求助：</span>{{ help.title }}</h4>
+								<div class="d-info d-list-position d-font-size-10">
+									<div class="d-info-item d-color-main d-font-size-16">
+										{{ help.price }}元
+									</div>
+									<div class="d-info-item d-color-gray">
+										<span class="d-padding-lr-5">{{ help.dist }}</span>
+										<span class="d-padding-lr-5"><i class="iconfont icon-shijian d-padding-r-2"></i>{{ help.time }}</span>
+										<span class="d-padding-lr-5"><i class="iconfont icon-comment d-padding-r-2"></i>{{ help.comment }}</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="d-container-fluid d-margin-t-10 d-border-tb">
+			<div class="d-info d-padding-10">
+				<div class="d-info-item">
+					<blockquote>服务事项推荐</blockquote>
+				</div>
+				<div class="d-info-item">
+					<span class="d-font-size-12 d-color-main">查看更多<i class="iconfont icon-xiangyoujiantou"></i></span>
+				</div>
+			</div>
+			<ul class="d-list d-list-active d-border-tb">
+				<li class="d-border-t" v-for='service in services'>
+					<div class="d-list-info">
+						<div class="d-row d-row-padding-big d-list-media">
+							<div class="d-col-xs-4">
+								<span :style="{ backgroundImage: `url(${service.pic})`}"></span>
+							</div>
+							<div class="d-col-xs-8">
+								<h4 class="d-nowrap-2"><span class="d-color-main">求助：</span>{{ service.title }}</h4>
+								<div class="d-info d-list-position d-font-size-10">
+									<div class="d-info-item d-color-main d-font-size-16">
+										{{ service.price }}元
+									</div>
+									<div class="d-info-item d-color-gray">
+										<span class="d-padding-lr-5">{{ service.dist }}</span>
+										<span class="d-padding-lr-5"><i class="iconfont icon-shijian d-padding-r-2"></i>{{ service.time }}</span>
+										<span class="d-padding-lr-5"><i class="iconfont icon-comment d-padding-r-2"></i>{{ service.comment }}</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="d-container-fluid d-margin-t-10 d-border-tb">
+			<div class="d-info d-padding-10">
+				<div class="d-info-item">
+					<blockquote>最新资讯</blockquote>
+				</div>
+				<div class="d-info-item">
+					<span class="d-font-size-10 d-color-main">查看更多<i class="iconfont icon-xiangyoujiantou"></i></span>
+				</div>
+			</div>
+			<ul class="d-list d-list-active d-border-tb">
+				<li class="d-border-t" v-for='item in news'>
+					<template v-if="typeof item.pic === 'object' && item.pic.length === 3">
+						<news-multi :pic='item.pic' :title='item.title' :source='item.source' :time='item.time' :comment='item.comment' />
+					</template>
+					<template v-if="typeof item.pic === 'string'">
+						<news-single :pic='item.pic' :title='item.title' :source='item.source' :time='item.time' :comment='item.comment' />
+					</template>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<script type="text/x-template" id="news-multi-template">
+		<div class="d-list-info">
+      <h4 class="d-nowrap-2">{{ title }}</h4>
+      <div class="d-row d-row-padding d-list-media d-margin-tb-10">
+        <div class="d-col-xs-4">
+          <span :style="{ backgroundImage: 'url(' + pic[0] + ')' }"></span>
+        </div>
+        <div class="d-col-xs-4">
+          <span :style="{ backgroundImage: 'url(' + pic[1] + ')' }"></span>
+        </div>
+        <div class="d-col-xs-4">
+          <span :style="{ backgroundImage: 'url(' + pic[2] + ')' }"></span>
+        </div>
+      </div>
+      <div class="d-info d-font-size-10 d-color-gray">
+        <div class="d-info-item">
+          来源：{{ source }}
+        </div>
+        <div class="d-info-item">
+          <span class="d-padding-lr-10"><i class="iconfont icon-shijian"></i> {{ time }}</span>
+          <span class="d-padding-lr-10"><i class="iconfont icon-comment"></i> {{ comment }}</span>
+        </div>
+      </div>
+    </div>
+	</script>
+
+	<script type="text/x-template" id='news-single-template'>
+		<div class="d-list-info">
+      <div class="d-row d-row-padding-big d-list-media">
+        <div class="d-col-xs-8">
+          <h4 class="d-nowrap-2">{{ title }}</h4>
+          <div class="d-info d-list-position d-font-size-10">
+						<div class="d-info-item d-color-gray">
+							来源：{{ source }}
+						</div>
+            <div class="d-info-item d-color-gray">
+              <span class="d-padding-lr-5"><i class="iconfont icon-shijian d-padding-r-2"></i> {{ time }}</span>
+              <span class="d-padding-lr-5"><i class="iconfont icon-comment d-padding-r-2"></i> {{ comment }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="d-col-xs-4">
+          <span :style="{ backgroundImage: 'url(' + pic + ')' }"></span>
+        </div>
+      </div>
+    </div>
+	</script>
+
+	<script type="text/javascript" src="../dist/scripts/common/vue.js"></script>
+	<script type="text/javascript" src="../dist/scripts/modules/home_home.js"></script>
+</body>
+
+</html>
